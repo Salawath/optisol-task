@@ -1,0 +1,107 @@
+[{
+  "_id": {
+    "$oid": "611391de833d661fccf5e91d"
+  },
+  "cart": {
+    "items": null
+  },
+  "name": "salawath",
+  "email": "salawath@gmail.com",
+  "password": "$2a$12$HNu8Hxt4z8Tl3VEMSRWIAOZFCWp.Cm2ozPmcxB02rLRBQsTOeaBb.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6114ce4fc469911a883bf0c2"
+  },
+  "cart": {
+    "items": []
+  },
+  "name": "arshath",
+  "email": "arshath@gmail.com",
+  "password": "$2a$12$7GXWPbFpB8P8s9m52rjl2OwPRVVTfltpzgXWux0p06w.SGAffgoLC",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6114d01ac469911a883bf0c4"
+  },
+  "cart": {
+    "items": [
+      {
+        "_id": {
+          "$oid": "611575ece720702808f3073c"
+        },
+        "productId": {
+          "$oid": "61136e3950599b2da864d366"
+        },
+        "quantity": 2,
+        "total": 1400
+      },
+      {
+        "_id": {
+          "$oid": "61157606e720702808f30762"
+        },
+        "productId": {
+          "$oid": "61136b8b50599b2da864d362"
+        },
+        "quantity": 2,
+        "total": 1798
+      },
+      {
+        "_id": {
+          "$oid": "611579bce720702808f30783"
+        },
+        "productId": {
+          "$oid": "6115799ee720702808f30778"
+        },
+        "quantity": 2,
+        "total": 2400
+      }
+    ]
+  },
+  "name": "suresh",
+  "email": "suresh@gmail.com",
+  "password": "$2a$12$6Jnl7oDDIdN9aqc6UhBRHOoTh8kp5SGZboB7CZTPox6OmDMKsBau6",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61156167e720702808f303b1"
+  },
+  "cart": {
+    "items": [
+      {
+        "_id": {
+          "$oid": "611570b1e720702808f305f6"
+        },
+        "productId": {
+          "$oid": "61136e3950599b2da864d366"
+        },
+        "quantity": 2,
+        "total": 1400
+      },
+      {
+        "_id": {
+          "$oid": "61157342e720702808f306c4"
+        },
+        "productId": {
+          "$oid": "61136e1550599b2da864d364"
+        },
+        "quantity": 1,
+        "total": 999
+      },
+      {
+        "_id": {
+          "$oid": "61157422e720702808f306f8"
+        },
+        "productId": {
+          "$oid": "61136b8b50599b2da864d362"
+        },
+        "quantity": 2,
+        "total": 1798
+      }
+    ]
+  },
+  "name": "dhoni",
+  "email": "dhoni@gmail.com",
+  "password": "$2a$12$Z1O.wNenhDpWMoUcl7guU.d/YMpH/naQ4JupaT9l/FNikdl6mAsM2",
+  "__v": 0
+}]
