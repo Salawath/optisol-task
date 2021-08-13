@@ -20,10 +20,7 @@ function Cart() {
     }
   };
 
-  useEffect(() => {
-    fetchCartProducts();
-  }, [sid]);
-
+ 
   const addCart = async (e) => {
     try {
       const id = e.target.getAttribute("data-id");
@@ -50,51 +47,64 @@ function Cart() {
     }
   };
   let sum = 0;
-  const sum1 = cart.products.map((count) => {
-    return (sum += count.total);
-  });
+  const sum1 =
+    cart.products && cart.products.length > 0
+      ? cart.products.map((count) => {
+          return (sum += count.total);
+        })
+      : 0;
+  const buy = () => {
+    alert("Thanks for Purchase");
+  };
 
-  const buy=()=>{
-      alert("Thanks for Purchase");
-  }
-
-  const cartItems = cart.products.map((prod) => {
-    return (
-      <div className="row">
-        <hr></hr>
-        <div className="col-md-3 text-center">
-          <p>{prod.productId.title}</p>
-        </div>
-        <div className="col-md-2 text-center">
-          <p>{prod.productId.price}</p>
-        </div>
-        <div className="col-md-2 text-center">
-          <p>{prod.quantity}</p>
-        </div>
-        <div className="col-md-2 text-center">
-          <p>{prod.total}</p>
-        </div>
-        <div className="col-md-3 text-center">
-          <button
-            className="btn"
-            id="remove-button"
-            data-id={prod.productId.id}
-            onClick={removeCart}
-          >
-            -
-          </button>
-          <button
-            className="btn"
-            id="add-button"
-            data-id={prod.productId.id}
-            onClick={addCart}
-          >
-            +
-          </button>
-        </div>
-      </div>
+  const cartItems =
+    cart.products && cart.products.length > 0 ? (
+      cart.products.map((prod) => {
+        return (
+          <div className="row">
+            <hr></hr>
+            <div className="col-md-3 text-center">
+              <p>{prod.productId.title}</p>
+            </div>
+            <div className="col-md-2 text-center">
+              <p>{prod.productId.price}</p>
+            </div>
+            <div className="col-md-2 text-center">
+              <p>{prod.quantity}</p>
+            </div>
+            <div className="col-md-2 text-center">
+              <p>{prod.total}</p>
+            </div>
+            <div className="col-md-3 text-center">
+              <button
+                className="btn"
+                id="remove-button"
+                data-id={prod.productId.id}
+                onClick={removeCart}
+              >
+                -
+              </button>
+              <button
+                className="btn"
+                id="add-button"
+                data-id={prod.productId.id}
+                onClick={addCart}
+              >
+                +
+              </button>
+            </div>
+          </div>
+        );
+      })
+    ) : (
+      <div>...loading</div>
     );
-  });
+
+     useEffect(() => {
+       fetchCartProducts();
+     }, [sid]);
+
+
   return (
     <div className="row">
       <div className="col-md-8">
@@ -125,7 +135,7 @@ function Cart() {
             <hr></hr>
             <div className="d-grid gap-0">
               <a className="btn  btn-primary" type="button" onClick={buy}>
-               BUY
+                BUY
               </a>
             </div>
           </div>
